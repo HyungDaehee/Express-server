@@ -102,4 +102,5 @@ app.get("/auth/Kakao", async (req, res) => {
   res.json({ token: accessToken });
 });
 
-module.exports.handler = serverless(app);
+module.exports = app;
+
