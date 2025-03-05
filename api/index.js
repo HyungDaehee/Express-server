@@ -9,9 +9,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://restaurant-search.vercel.app'],
   methods: ['GET', 'POST'],
 }));
+
 app.use(express.json());
 
 app.get('/api/search', (req, res) => {
