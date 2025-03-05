@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const User = require('./src/db/User.js');
+const User = require('./User.js');
 require('dotenv').config();
 
 const app = express();
