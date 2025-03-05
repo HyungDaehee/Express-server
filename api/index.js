@@ -103,5 +103,9 @@ app.get("/auth/Kakao", async (req, res) => {
   res.json({ token: accessToken });
 });
 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 module.exports = app;
 
