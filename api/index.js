@@ -15,6 +15,10 @@ app.use(cors({
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('제발 부탁이야~');
+});
+
 app.get('/api/search', (req, res) => {
   const { query } = req.query;
   const KAKAO_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY;
