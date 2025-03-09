@@ -60,7 +60,7 @@ app.get('/api/search', (req, res) => {
 
 app.get("/auth/Kakao", async (req, res) => {
   let REST_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY;
-  let REDIRECT_URI = process.env.REACT_APP_KAKAO_LOGIN_REDIRECT_URI;
+  let REDIRECT_URI = 'https://restaurant-search-eight.vercel.app/Login';
 
   let code = req.query.code;
   console.log("인가 코드:", code);
