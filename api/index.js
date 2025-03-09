@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://restaurant-search-ivory.vercel.app'],
+  origin: [process.env.CORS_ORIGIN, 'http://localhost:3000'],
   methods: ['GET', 'POST'],
 }));
 
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/search', (req, res) => {
   const { query } = req.query;
-  const KAKAO_API_KEY = '6116026697d7c84da46212493aef754b';
+  const KAKAO_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY;
   const MAX_PAGE = 40;
   const itemsPerPage = 15;
   const allResults = [];
@@ -59,8 +59,8 @@ app.get('/api/search', (req, res) => {
 });
 
 app.get("/auth/Kakao", async (req, res) => {
-  let REST_API_KEY = '6116026697d7c84da46212493aef754b';
-  let REDIRECT_URI = 'https://restaurant-search-ivory.vercel.app/Login';
+  let REST_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY;
+  let REDIRECT_URI = process.env.REACT_APP_KAKAO_LOGIN_REDIRECT_URI;
 
   let code = req.query.code;
   console.log("인가 코드:", code);
