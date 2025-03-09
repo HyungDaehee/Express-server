@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: ['http://localhost:3000', process.env.REACT_APP_PUBLIC_URL],
+  origin: ['http://localhost:3000', 'https://restaurant-search-omega.vercel.app'],
   methods: ['GET', 'POST'],
 }));
 
