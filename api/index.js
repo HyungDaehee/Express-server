@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors({
   origin: 'https://restaurant-search-mu.vercel.app',
   methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json());
