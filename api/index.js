@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.get('/api/search', (req, res) => {
   const { query } = req.query;
   const KAKAO_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY;
-  const MAX_PAGE = 40;
+  const MAX_PAGE = 10;
   const itemsPerPage = 15;
   const allResults = [];
 
