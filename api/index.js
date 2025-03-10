@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://restaurant-search-mu.vercel.app/',
+  origin: 'https://restaurant-search-mu.vercel.app',
   methods: ['GET', 'POST'],
 }));
 
@@ -60,7 +60,7 @@ app.get('/api/search', (req, res) => {
 
 app.get("/auth/Kakao", async (req, res) => {
   let REST_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY;
-  let REDIRECT_URI = 'https://restaurant-search-mu.vercel.app/Login';
+  let REDIRECT_URI = 'https://restaurant-search-mu.vercel.app/gLogin';
 
   let code = req.query.code;
   console.log("인가 코드:", code);
