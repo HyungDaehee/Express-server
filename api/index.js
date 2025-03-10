@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: [process.env.CORS_ORIGIN, 'http://localhost:3000'],
+  origin: 'https://restaurant-search-mu.vercel.app',
   methods: ['GET', 'POST'],
 }));
 
