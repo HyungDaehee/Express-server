@@ -96,7 +96,7 @@ app.get("/api/auth/Kakao", async (req, res) => {
   const nickname = kakao_account.profile.nickname || "No nickname";
 
   const MONGODB_URI = process.env.MONGODB_URI;
-  await mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+  await mongoose.connect(MONGODB_URI);
 
   const user = await User.findOneAndUpdate(
     { id: String(id) },
