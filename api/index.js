@@ -105,7 +105,11 @@ app.get("/api/auth/Kakao", async (req, res) => {
   );
 
   console.log("MongoDB에 유저 정보 저장됨:", user);
-  res.json({ token: accessToken });
+  res.json({
+    access_token: accessToken,
+    user_id: id,
+    nickname: nickname,
+  });
 });
 
 app.listen(PORT, () => {
