@@ -66,7 +66,7 @@ app.get('/api/search', (req, res) => {
   fetchData();
 });
 
-app.get("/api/auth/Kakao", async (req, res) => {
+app.get('/api/auth/Kakao', async (req, res) => {
   let REST_API_KEY = process.env.REACT_APP_KAKAO_REST_API_KEY;
   let REDIRECT_URI = 'https://restaurant-search-mu.vercel.app/Login';
 
