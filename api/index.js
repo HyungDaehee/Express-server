@@ -9,8 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-  origin: 'https://restaurant-search-mu.vercel.app',
-  methods: ['GET', 'POST'],
+  origin: 'https://restaurant-search-mu.vercel.app', withCredentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
