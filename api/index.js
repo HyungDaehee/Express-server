@@ -95,17 +95,17 @@ app.get("/api/auth/Kakao", async (req, res) => {
   const { id, kakao_account } = UserInfo.data;
   const nickname = kakao_account.profile.nickname || "No nickname";
 
-  const MONGODB_URI = process.env.MONGODB_URI;
-  await mongoose.connect(MONGODB_URI);
+  // const MONGODB_URI = process.env.MONGODB_URI;
+  // await mongoose.connect(MONGODB_URI);
 
-  const user = await User.findOneAndUpdate(
-    { id: String(id) },
-    { name: nickname, createdAt: new Date() },
-    { upsert: true, new: true }
-  );
+  // const user = await User.findOneAndUpdate(
+  //   { id: String(id) },
+  //   { name: nickname, createdAt: new Date() },
+  //   { upsert: true, new: true }
+  // );
 
-  console.log("MongoDB에 유저 정보 저장됨:", user);
-  res.json({ token: accessToken });
+  // console.log("MongoDB에 유저 정보 저장됨:", user);
+  // res.json({ token: accessToken });
 });
 
 app.listen(PORT, () => {
