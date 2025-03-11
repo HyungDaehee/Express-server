@@ -14,13 +14,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-app.use((req, res, next) => {
-  res.setTimeout(60000, () => {
-    res.status(504).send('Request timed out');
-  });
-  next();
-});
-
 app.use(express.json());
 
 app.get('/', (req, res) => {
