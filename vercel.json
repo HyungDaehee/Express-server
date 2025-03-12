@@ -14,7 +14,8 @@
   ],
   "functions": {
     "api/index.js": {
-      "regions": ["icn1"]
+      "regions": ["icn1"],
+      "maxDuration": 30
     }
   }
 }
